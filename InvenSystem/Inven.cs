@@ -117,6 +117,7 @@ namespace InvenSystem
             Console.WriteLine("**************");
         }
 
+        // ▶ 선택된 아이템 정보 왼쪽이동 Method
         public void selectMoveLeft()
         {
             selectIndex -= 1;
@@ -126,6 +127,7 @@ namespace InvenSystem
 
         }
 
+        // ▶ 선택된 아이템 정보 오른쪽이동 Method
         public void selectMoveRight()
         {
             selectIndex += 1;
@@ -134,6 +136,7 @@ namespace InvenSystem
             selectIndexValidation(moveIndex);
         }
 
+        // ▶ 선택된 아이템 정보 위쪽이동 Method
         public void selectMoveUp()
         {
             selectIndex -= itemX;
@@ -142,6 +145,7 @@ namespace InvenSystem
             selectIndexValidation(moveIndex);
         }
 
+        // ▶ 선택된 아이템 정보 아래쪽이동 Method
         public void selectMoveDown()
         {
             selectIndex += itemX;
@@ -150,6 +154,7 @@ namespace InvenSystem
             selectIndexValidation(moveIndex);
         }
 
+        // ▶ 선택이동 검증 Method
         private void selectIndexValidation(int _moveIndex)
         {
             int totalInvenCount = itemX * itemY;     // 총 인벤토리 칸수
