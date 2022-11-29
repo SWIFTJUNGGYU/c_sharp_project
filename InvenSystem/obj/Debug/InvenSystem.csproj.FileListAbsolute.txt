@@ -1,0 +1,8 @@
+C:\Users\82102\source\repos\InvenSystem\InvenSystem\bin\Debug\InvenSystem.exe.config
+C:\Users\82102\source\repos\InvenSystem\InvenSystem\bin\Debug\InvenSystem.exe
+C:\Users\82102\source\repos\InvenSystem\InvenSystem\bin\Debug\InvenSystem.pdb
+C:\Users\82102\source\repos\InvenSystem\InvenSystem\obj\Debug\InvenSystem.csproj.AssemblyReference.cache
+C:\Users\82102\source\repos\InvenSystem\InvenSystem\obj\Debug\InvenSystem.csproj.SuggestedBindingRedirects.cache
+C:\Users\82102\source\repos\InvenSystem\InvenSystem\obj\Debug\InvenSystem.csproj.CoreCompileInputs.cache
+C:\Users\82102\source\repos\InvenSystem\InvenSystem\obj\Debug\InvenSystem.exe
+C:\Users\82102\source\repos\InvenSystem\InvenSystem\obj\Debug\InvenSystem.pdb
