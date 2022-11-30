@@ -1,0 +1,15 @@
+C:\Users\Junggyu Choi\source\repos\Test_Solution\Project\bin\Debug\net6.0\Inheritance Test.exe
+C:\Users\Junggyu Choi\source\repos\Test_Solution\Project\bin\Debug\net6.0\Inheritance Test.deps.json
+C:\Users\Junggyu Choi\source\repos\Test_Solution\Project\bin\Debug\net6.0\Inheritance Test.runtimeconfig.json
+C:\Users\Junggyu Choi\source\repos\Test_Solution\Project\bin\Debug\net6.0\Inheritance Test.dll
+C:\Users\Junggyu Choi\source\repos\Test_Solution\Project\bin\Debug\net6.0\Inheritance Test.pdb
+C:\Users\Junggyu Choi\source\repos\Test_Solution\Project\obj\Debug\net6.0\Inheritance Test.csproj.AssemblyReference.cache
+C:\Users\Junggyu Choi\source\repos\Test_Solution\Project\obj\Debug\net6.0\Inheritance Test.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Junggyu Choi\source\repos\Test_Solution\Project\obj\Debug\net6.0\Inheritance Test.AssemblyInfoInputs.cache
+C:\Users\Junggyu Choi\source\repos\Test_Solution\Project\obj\Debug\net6.0\Inheritance Test.AssemblyInfo.cs
+C:\Users\Junggyu Choi\source\repos\Test_Solution\Project\obj\Debug\net6.0\Inheritance Test.csproj.CoreCompileInputs.cache
+C:\Users\Junggyu Choi\source\repos\Test_Solution\Project\obj\Debug\net6.0\Inheritance Test.dll
+C:\Users\Junggyu Choi\source\repos\Test_Solution\Project\obj\Debug\net6.0\refint\Inheritance Test.dll
+C:\Users\Junggyu Choi\source\repos\Test_Solution\Project\obj\Debug\net6.0\Inheritance Test.pdb
+C:\Users\Junggyu Choi\source\repos\Test_Solution\Project\obj\Debug\net6.0\Inheritance Test.genruntimeconfig.cache
+C:\Users\Junggyu Choi\source\repos\Test_Solution\Project\obj\Debug\net6.0\ref\Inheritance Test.dll

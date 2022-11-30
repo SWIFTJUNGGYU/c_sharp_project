@@ -1,0 +1,8 @@
+C:\Users\Junggyu Choi\source\repos\Test_Solution\Overriding\bin\Debug\Overriding.exe.config
+C:\Users\Junggyu Choi\source\repos\Test_Solution\Overriding\bin\Debug\Overriding.exe
+C:\Users\Junggyu Choi\source\repos\Test_Solution\Overriding\bin\Debug\Overriding.pdb
+C:\Users\Junggyu Choi\source\repos\Test_Solution\Overriding\obj\Debug\Overriding.csproj.AssemblyReference.cache
+C:\Users\Junggyu Choi\source\repos\Test_Solution\Overriding\obj\Debug\Overriding.csproj.SuggestedBindingRedirects.cache
+C:\Users\Junggyu Choi\source\repos\Test_Solution\Overriding\obj\Debug\Overriding.csproj.CoreCompileInputs.cache
+C:\Users\Junggyu Choi\source\repos\Test_Solution\Overriding\obj\Debug\Overriding.exe
+C:\Users\Junggyu Choi\source\repos\Test_Solution\Overriding\obj\Debug\Overriding.pdb

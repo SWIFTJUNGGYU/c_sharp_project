@@ -1,0 +1,15 @@
+C:\Users\Junggyu Choi\source\repos\Test_Solution\StructTest\bin\Debug\net6.0\Struct Test.exe
+C:\Users\Junggyu Choi\source\repos\Test_Solution\StructTest\bin\Debug\net6.0\Struct Test.deps.json
+C:\Users\Junggyu Choi\source\repos\Test_Solution\StructTest\bin\Debug\net6.0\Struct Test.runtimeconfig.json
+C:\Users\Junggyu Choi\source\repos\Test_Solution\StructTest\bin\Debug\net6.0\Struct Test.dll
+C:\Users\Junggyu Choi\source\repos\Test_Solution\StructTest\bin\Debug\net6.0\Struct Test.pdb
+C:\Users\Junggyu Choi\source\repos\Test_Solution\StructTest\obj\Debug\net6.0\Struct Test.csproj.AssemblyReference.cache
+C:\Users\Junggyu Choi\source\repos\Test_Solution\StructTest\obj\Debug\net6.0\Struct Test.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Junggyu Choi\source\repos\Test_Solution\StructTest\obj\Debug\net6.0\Struct Test.AssemblyInfoInputs.cache
+C:\Users\Junggyu Choi\source\repos\Test_Solution\StructTest\obj\Debug\net6.0\Struct Test.AssemblyInfo.cs
+C:\Users\Junggyu Choi\source\repos\Test_Solution\StructTest\obj\Debug\net6.0\Struct Test.csproj.CoreCompileInputs.cache
+C:\Users\Junggyu Choi\source\repos\Test_Solution\StructTest\obj\Debug\net6.0\Struct Test.dll
+C:\Users\Junggyu Choi\source\repos\Test_Solution\StructTest\obj\Debug\net6.0\refint\Struct Test.dll
+C:\Users\Junggyu Choi\source\repos\Test_Solution\StructTest\obj\Debug\net6.0\Struct Test.pdb
+C:\Users\Junggyu Choi\source\repos\Test_Solution\StructTest\obj\Debug\net6.0\Struct Test.genruntimeconfig.cache
+C:\Users\Junggyu Choi\source\repos\Test_Solution\StructTest\obj\Debug\net6.0\ref\Struct Test.dll

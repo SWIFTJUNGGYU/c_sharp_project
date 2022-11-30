@@ -1,0 +1,15 @@
+C:\Users\Junggyu Choi\source\repos\Test_Solution\Class Constructor Test\bin\Debug\net6.0\Class Constructor Test.exe
+C:\Users\Junggyu Choi\source\repos\Test_Solution\Class Constructor Test\bin\Debug\net6.0\Class Constructor Test.deps.json
+C:\Users\Junggyu Choi\source\repos\Test_Solution\Class Constructor Test\bin\Debug\net6.0\Class Constructor Test.runtimeconfig.json
+C:\Users\Junggyu Choi\source\repos\Test_Solution\Class Constructor Test\bin\Debug\net6.0\Class Constructor Test.dll
+C:\Users\Junggyu Choi\source\repos\Test_Solution\Class Constructor Test\bin\Debug\net6.0\Class Constructor Test.pdb
+C:\Users\Junggyu Choi\source\repos\Test_Solution\Class Constructor Test\obj\Debug\net6.0\Class Constructor Test.csproj.AssemblyReference.cache
+C:\Users\Junggyu Choi\source\repos\Test_Solution\Class Constructor Test\obj\Debug\net6.0\Class Constructor Test.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Junggyu Choi\source\repos\Test_Solution\Class Constructor Test\obj\Debug\net6.0\Class Constructor Test.AssemblyInfoInputs.cache
+C:\Users\Junggyu Choi\source\repos\Test_Solution\Class Constructor Test\obj\Debug\net6.0\Class Constructor Test.AssemblyInfo.cs
+C:\Users\Junggyu Choi\source\repos\Test_Solution\Class Constructor Test\obj\Debug\net6.0\Class Constructor Test.csproj.CoreCompileInputs.cache
+C:\Users\Junggyu Choi\source\repos\Test_Solution\Class Constructor Test\obj\Debug\net6.0\Class Constructor Test.dll
+C:\Users\Junggyu Choi\source\repos\Test_Solution\Class Constructor Test\obj\Debug\net6.0\refint\Class Constructor Test.dll
+C:\Users\Junggyu Choi\source\repos\Test_Solution\Class Constructor Test\obj\Debug\net6.0\Class Constructor Test.pdb
+C:\Users\Junggyu Choi\source\repos\Test_Solution\Class Constructor Test\obj\Debug\net6.0\Class Constructor Test.genruntimeconfig.cache
+C:\Users\Junggyu Choi\source\repos\Test_Solution\Class Constructor Test\obj\Debug\net6.0\ref\Class Constructor Test.dll
