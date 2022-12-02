@@ -19,7 +19,8 @@ namespace Inner_Enum_Test
             Chief,
             Doctor,
             Repairman,
-            Police
+            Police,
+            SuperMom
         }
 
         PlayerJob manJob = PlayerJob.Doctor; 

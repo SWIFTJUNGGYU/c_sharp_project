@@ -7,7 +7,7 @@
     <ProjectGuid>{2B606853-4C30-414B-9151-7C4C19CA8AFC}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Inner_Enum_Test</RootNamespace>
-    <AssemblyName>Inner_Enum_Test</AssemblyName>
+    <AssemblyName>Inner Enum Test</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
