@@ -43,6 +43,8 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
+            this.tablePanel1 = new DevExpress.Utils.Layout.TablePanel();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).BeginInit();
@@ -56,10 +58,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.tablePanel1);
             this.layoutControl1.Controls.Add(this.memoEdit1);
             this.layoutControl1.Controls.Add(this.textEdit3);
             this.layoutControl1.Controls.Add(this.btnSaveLayout);
@@ -77,7 +82,7 @@
             // 
             this.memoEdit1.Location = new System.Drawing.Point(121, 60);
             this.memoEdit1.Name = "memoEdit1";
-            this.memoEdit1.Size = new System.Drawing.Size(592, 436);
+            this.memoEdit1.Size = new System.Drawing.Size(592, 412);
             this.memoEdit1.StyleController = this.layoutControl1;
             this.memoEdit1.TabIndex = 4;
             // 
@@ -91,7 +96,7 @@
             // 
             // btnSaveLayout
             // 
-            this.btnSaveLayout.Location = new System.Drawing.Point(525, 500);
+            this.btnSaveLayout.Location = new System.Drawing.Point(525, 476);
             this.btnSaveLayout.Name = "btnSaveLayout";
             this.btnSaveLayout.Size = new System.Drawing.Size(188, 22);
             this.btnSaveLayout.StyleController = this.layoutControl1;
@@ -125,7 +130,8 @@
             this.layoutControlItem4,
             this.layoutControlItem3,
             this.layoutControlItem5,
-            this.emptySpaceItem1});
+            this.emptySpaceItem1,
+            this.layoutControlItem6});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(725, 534);
             this.Root.TextVisible = false;
@@ -163,7 +169,7 @@
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.btnSaveLayout;
-            this.layoutControlItem3.Location = new System.Drawing.Point(513, 488);
+            this.layoutControlItem3.Location = new System.Drawing.Point(513, 464);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(192, 26);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
@@ -174,13 +180,13 @@
             this.layoutControlItem5.Control = this.memoEdit1;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 48);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(705, 440);
+            this.layoutControlItem5.Size = new System.Drawing.Size(705, 416);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(105, 14);
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 488);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 464);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
             this.emptySpaceItem1.Size = new System.Drawing.Size(513, 26);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
@@ -188,6 +194,28 @@
             // defaultLookAndFeel1
             // 
             this.defaultLookAndFeel1.LookAndFeel.SkinName = "Visual Studio 2013 Blue";
+            // 
+            // tablePanel1
+            // 
+            this.tablePanel1.Columns.AddRange(new DevExpress.Utils.Layout.TablePanelColumn[] {
+            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 5F),
+            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 55F)});
+            this.tablePanel1.Location = new System.Drawing.Point(12, 502);
+            this.tablePanel1.Name = "tablePanel1";
+            this.tablePanel1.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
+            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26F),
+            new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26F)});
+            this.tablePanel1.Size = new System.Drawing.Size(701, 20);
+            this.tablePanel1.TabIndex = 6;
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.tablePanel1;
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 490);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(705, 24);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem6.TextVisible = false;
             // 
             // XtraForm1
             // 
@@ -211,6 +239,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -231,5 +261,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
+        private DevExpress.Utils.Layout.TablePanel tablePanel1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
     }
 }
