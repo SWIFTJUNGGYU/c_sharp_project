@@ -8,11 +8,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraGrid.Columns;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace Grid_Control
 {
+  
+
     public partial class frmGrid : DevExpress.XtraEditors.XtraForm
     {
+        BindingList<Record> gridList;
+
+        public class Record
+        {
+            public string COL1 { get; set; }
+            public string COL2 { get; set; }
+            public string COL3 { get; set; }
+
+        }
+
         public frmGrid()
         {
             InitializeComponent();
@@ -22,10 +36,13 @@ namespace Grid_Control
         private void frmGrid_Load(object sender, EventArgs e)
         {
             // Grid 적용 Data List 생성
-            List<gridData> dataList = getGridDataList();
+            //List<gridData> dataList = getGridDataList();
 
             // Grid에 Data List 적용
-            this.grdTest.DataSource = dataList;
+            //this.grdTest.DataSource = dataList;
+
+            // 그리드 Caption 적용
+            iniCaption();
         }
 
         // [Grid Data List 생성 Method]
@@ -41,7 +58,26 @@ namespace Grid_Control
 
             return list;
         }
+
+        public void iniCaption()
+        {
+            DevExpress.XtraGrid.Columns.GridColumn col;
+
+            col = new GridColumn();
+            col.FieldName = "COL1";
+            col.Caption = "COL1";
+            gridView1.Columns.Add(col);
+
+            gridView1.Columns["COL1"].VisibleIndex = 1;
+
+            gridList = new BindingList<Record>();
+            grdTest.DataSource = gridList;
+
+        }
     }
+
+
+    
 
     // [Grid Dataset 생성 Class]
     public class gridData
