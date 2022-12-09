@@ -19,6 +19,7 @@ namespace Grid_Control
     {
         BindingList<Record> gridList;
 
+        // [Grid Dataset 생성 Class]
         public class Record
         {
             public string COL1 { get; set; }
@@ -35,63 +36,46 @@ namespace Grid_Control
         // [Form Load Method]
         private void frmGrid_Load(object sender, EventArgs e)
         {
-            // Grid 적용 Data List 생성
-            //List<gridData> dataList = getGridDataList();
-
-            // Grid에 Data List 적용
-            //this.grdTest.DataSource = dataList;
-
             // 그리드 Caption 적용
             iniCaption();
         }
 
-        // [Grid Data List 생성 Method]
-        private List<gridData> getGridDataList()
-        {
-            // Grid Dataset List 생성
-            List<gridData> list = new List<gridData>();
-
-            // Grid Dataset 데이터셋 Add
-            list.Add(new gridData("과일", "바나나", 1000));
-            list.Add(new gridData("과자", "꼬북칩", 5000));
-            list.Add(new gridData("음료수", "포카리 스웨트", 1650));
-
-            return list;
-        }
-
+        // [Grid Caption 지정 Method]
         public void iniCaption()
         {
             DevExpress.XtraGrid.Columns.GridColumn col;
 
             col = new GridColumn();
             col.FieldName = "COL1";
-            col.Caption = "COL1";
+            col.Caption = "음식 종류";
             gridView1.Columns.Add(col);
 
-            gridView1.Columns["COL1"].VisibleIndex = 1;
+            col = new GridColumn();
+            col.FieldName = "COL2";
+            col.Caption = "음식명";
+            gridView1.Columns.Add(col);
+
+            col = new GridColumn();
+            col.FieldName = "COL3";
+            col.Caption = "금액";
+            col.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
+            gridView1.Columns.Add(col);
+
+            gridView1.Columns["COL1"].VisibleIndex = 0;
+            gridView1.Columns["COL1"].AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            gridView1.Columns["COL1"].Visible = true;
+
+            gridView1.Columns["COL2"].VisibleIndex = 1;
+            gridView1.Columns["COL2"].AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            gridView1.Columns["COL2"].Visible = true;
+
+            gridView1.Columns["COL3"].VisibleIndex = 2;
+            gridView1.Columns["COL3"].AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            gridView1.Columns["COL3"].Visible = true;
 
             gridList = new BindingList<Record>();
             grdTest.DataSource = gridList;
 
-        }
-    }
-
-
-    
-
-    // [Grid Dataset 생성 Class]
-    public class gridData
-    {
-        string data1 { get; set; }
-        string data2 { get; set; }
-        int data3 { get; set; }
-
-        // Dataset 생성자
-        public gridData(string _data1, string _data2, int _data3)
-        {
-            this.data1 = _data1;
-            this.data2 = _data2;
-            this.data3 = _data3;
         }
     }
 }
