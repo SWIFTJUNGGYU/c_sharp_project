@@ -10,10 +10,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Grid;
+using System.Data.SqlClient;
+using DevExpress.XtraGrid;
+using DevExpress.XtraPrinting;
+using DevExpress.XtraGrid.Views.BandedGrid;
 
 namespace Grid_Control
 {
-  
 
     public partial class frmGrid : DevExpress.XtraEditors.XtraForm
     {
@@ -22,9 +25,9 @@ namespace Grid_Control
         // [Grid Dataset 생성 Class]
         public class Record
         {
-            public string COL1 { get; set; }
-            public string COL2 { get; set; }
-            public string COL3 { get; set; }
+            public string? COL1 { get; set; }
+            public string? COL2 { get; set; }
+            public string? COL3 { get; set; }
 
         }
 
@@ -76,6 +79,97 @@ namespace Grid_Control
             gridList = new BindingList<Record>();
             grdTest.DataSource = gridList;
 
+        }
+
+        // [Grid Delete Line Method]
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            gridView1.DeleteRow(gridView1.FocusedRowHandle);
+        }
+
+        // [Grid Add Line Method]
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+            Record rec = new Record();
+            gridList.Add(rec);
+        }
+
+        // [Grid Data Search Method]
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // 그리드 리스트 초기화
+                gridList = new BindingList<Record>();
+
+                // SQL 새연결 정보 생성
+                string connectionString = "Server = 127.0.0.1:1433;database=uid=sa;pwd=sa123";
+                SqlConnection sqlConn = new SqlConnection(connectionString);
+                SqlCommand sqlComm = new SqlCommand();
+
+                sqlComm.Connection = sqlConn;
+                sqlComm.CommandText = "select COL1, COL2, COL3 from table where COL1 = '4000'";
+                sqlConn.Open();
+
+                // SQL Data Read
+                Record rec;
+
+                using (SqlDataReader sqlResponse = sqlComm.ExecuteReader())
+                {
+                    while (sqlResponse.Read())
+                    {
+                        rec = new Record();
+                        rec.COL1 = sqlResponse["COL1"].ToString();
+                        rec.COL2 = sqlResponse["COL2"].ToString();
+                        rec.COL3 = sqlResponse["COL3"].ToString();
+                        gridList.Add(rec);
+                    }
+                }
+
+                // SQL 연결 해제 및 그리드 데이터 적용
+                sqlConn.Close();
+                grdTest.DataSource = gridList;
+                gridView1.BestFitColumns();
+
+            }
+            catch(Exception ex)
+            {
+                // Error Message Box Open
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        // [Grid Data Excel Export Method]
+        private void btn_excelExport_Click(object sender, EventArgs e)
+        {
+            // Excel용 Grid 너비 Setting
+            // - Excel 출력 시 모든 컬럼이 최소 사이즈 Width로 출력되는 상황 해결방법
+            gridView1.OptionsPrint.AutoWidth = false;
+            gridView1.OptionsView.ColumnAutoWidth = false;
+            gridView1.BestFitColumns(); // 그리드 컬럼의 최적 사이즈 Setting
+            //bestFitBands(grdTest);
+
+            // Excel Export Option Setting
+            XlsxExportOptionsEx xlsxOptions = new XlsxExportOptionsEx();
+            xlsxOptions.ShowGridLines = true;                               // 그리드 보이는 그대로 Line 출력
+            xlsxOptions.SheetName = "화면명_sysdate(20221212092355)";
+            xlsxOptions.ExportType = DevExpress.Export.ExportType.WYSIWYG;  // 그리드 형태 그대로 Excel Export
+
+            // Grid Data Excel Export
+            string path = "C:\\Users\\pc\\salesGoods.xlsx";
+            grdTest.ExportToXlsx(path, xlsxOptions);
+        }
+
+        // [Grid Data Band Best Fit Setting]
+        private void bestFitBands(AdvBandedGridView _view)
+        {
+            _view.BeginUpdate();
+            _view.OptionsView.ShowColumnHeaders = true;
+            foreach (BandedGridColumn col in _view.Columns)
+                col.Caption = col.OwnerBand.Caption;
+            _view.BestFitColumns();
+            _view.OptionsView.ShowColumnHeaders = false;
+            _view.EndUpdate();
         }
     }
 }
