@@ -28,20 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.grdTest = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.btn_add = new DevExpress.XtraEditors.SimpleButton();
             this.btn_delete = new DevExpress.XtraEditors.SimpleButton();
             this.btn_search = new DevExpress.XtraEditors.SimpleButton();
             this.btn_excelExport = new DevExpress.XtraEditors.SimpleButton();
+            this.combo_dropdown = new DevExpress.XtraEditors.DropDownButton();
+            this.popupMenu = new DevExpress.XtraBars.PopupMenu(this.components);
+            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
+            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.grdTest)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // grdTest
             // 
-            this.grdTest.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdTest.Location = new System.Drawing.Point(0, 0);
+            this.grdTest.Location = new System.Drawing.Point(12, 88);
             this.grdTest.MainView = this.gridView1;
             this.grdTest.Name = "grdTest";
             this.grdTest.Size = new System.Drawing.Size(901, 548);
@@ -91,22 +106,139 @@
             this.btn_excelExport.Text = "엑셀 출력";
             this.btn_excelExport.Click += new System.EventHandler(this.btn_excelExport_Click);
             // 
+            // combo_dropdown
+            // 
+            this.combo_dropdown.DropDownControl = this.popupMenu;
+            this.combo_dropdown.Location = new System.Drawing.Point(12, 12);
+            this.combo_dropdown.Name = "combo_dropdown";
+            this.combo_dropdown.Size = new System.Drawing.Size(135, 23);
+            this.combo_dropdown.TabIndex = 7;
+            this.combo_dropdown.Click += new System.EventHandler(this.combo_dropdown_Click);
+            // 
+            // popupMenu
+            // 
+            this.popupMenu.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem4),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem5),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem6)});
+            this.popupMenu.Manager = this.barManager1;
+            this.popupMenu.Name = "popupMenu";
+            // 
+            // barButtonItem4
+            // 
+            this.barButtonItem4.Caption = "barButtonItem4";
+            this.barButtonItem4.Id = 3;
+            this.barButtonItem4.Name = "barButtonItem4";
+            this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem_ItemClick);
+            // 
+            // barButtonItem5
+            // 
+            this.barButtonItem5.Caption = "barButtonItem5";
+            this.barButtonItem5.Id = 4;
+            this.barButtonItem5.Name = "barButtonItem5";
+            this.barButtonItem5.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem_ItemClick);
+            // 
+            // barButtonItem6
+            // 
+            this.barButtonItem6.Caption = "barButtonItem6";
+            this.barButtonItem6.Id = 5;
+            this.barButtonItem6.Name = "barButtonItem6";
+            this.barButtonItem6.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem_ItemClick);
+            // 
+            // barManager1
+            // 
+            this.barManager1.DockControls.Add(this.barDockControlTop);
+            this.barManager1.DockControls.Add(this.barDockControlBottom);
+            this.barManager1.DockControls.Add(this.barDockControlLeft);
+            this.barManager1.DockControls.Add(this.barDockControlRight);
+            this.barManager1.Form = this;
+            this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.barButtonItem1,
+            this.barButtonItem2,
+            this.barButtonItem3,
+            this.barButtonItem4,
+            this.barButtonItem5,
+            this.barButtonItem6});
+            this.barManager1.MaxItemId = 6;
+            // 
+            // barDockControlTop
+            // 
+            this.barDockControlTop.CausesValidation = false;
+            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlTop.Manager = this.barManager1;
+            this.barDockControlTop.Size = new System.Drawing.Size(1918, 0);
+            // 
+            // barDockControlBottom
+            // 
+            this.barDockControlBottom.CausesValidation = false;
+            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 1048);
+            this.barDockControlBottom.Manager = this.barManager1;
+            this.barDockControlBottom.Size = new System.Drawing.Size(1918, 0);
+            // 
+            // barDockControlLeft
+            // 
+            this.barDockControlLeft.CausesValidation = false;
+            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlLeft.Manager = this.barManager1;
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 1048);
+            // 
+            // barDockControlRight
+            // 
+            this.barDockControlRight.CausesValidation = false;
+            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.barDockControlRight.Location = new System.Drawing.Point(1918, 0);
+            this.barDockControlRight.Manager = this.barManager1;
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 1048);
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "barButtonItem1";
+            this.barButtonItem1.Id = 0;
+            this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem_ItemClick);
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "barButtonItem2";
+            this.barButtonItem2.Id = 1;
+            this.barButtonItem2.Name = "barButtonItem2";
+            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem_ItemClick);
+            // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "barButtonItem3";
+            this.barButtonItem3.Id = 2;
+            this.barButtonItem3.Name = "barButtonItem3";
+            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem_ItemClick);
+            // 
             // frmGrid
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(901, 548);
+            this.ClientSize = new System.Drawing.Size(1918, 1048);
+            this.Controls.Add(this.combo_dropdown);
             this.Controls.Add(this.btn_excelExport);
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_add);
             this.Controls.Add(this.grdTest);
+            this.Controls.Add(this.barDockControlLeft);
+            this.Controls.Add(this.barDockControlRight);
+            this.Controls.Add(this.barDockControlBottom);
+            this.Controls.Add(this.barDockControlTop);
             this.Name = "frmGrid";
             this.Text = "frmGrid";
             this.Load += new System.EventHandler(this.frmGrid_Load);
+            this.Shown += new System.EventHandler(this.frmGrid_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.grdTest)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.popupMenu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -118,5 +250,18 @@
         private DevExpress.XtraEditors.SimpleButton btn_delete;
         private DevExpress.XtraEditors.SimpleButton btn_search;
         private DevExpress.XtraEditors.SimpleButton btn_excelExport;
+        private DevExpress.XtraEditors.DropDownButton combo_dropdown;
+        private DevExpress.XtraBars.PopupMenu popupMenu;
+        private DevExpress.XtraBars.BarManager barManager1;
+        private DevExpress.XtraBars.BarDockControl barDockControlTop;
+        private DevExpress.XtraBars.BarDockControl barDockControlBottom;
+        private DevExpress.XtraBars.BarDockControl barDockControlLeft;
+        private DevExpress.XtraBars.BarDockControl barDockControlRight;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem5;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem6;
     }
 }

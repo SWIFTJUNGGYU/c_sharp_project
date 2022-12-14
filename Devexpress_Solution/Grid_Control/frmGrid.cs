@@ -14,6 +14,7 @@ using System.Data.SqlClient;
 using DevExpress.XtraGrid;
 using DevExpress.XtraPrinting;
 using DevExpress.XtraGrid.Views.BandedGrid;
+using DevExpress.XtraEditors.Repository;
 
 namespace Grid_Control
 {
@@ -21,6 +22,7 @@ namespace Grid_Control
     public partial class frmGrid : DevExpress.XtraEditors.XtraForm
     {
         BindingList<Record> gridList;
+        private RepositoryItemComboBox gradeComboBox;
 
         // [Grid Dataset 생성 Class]
         public class Record
@@ -146,7 +148,7 @@ namespace Grid_Control
             // - Excel 출력 시 모든 컬럼이 최소 사이즈 Width로 출력되는 상황 해결방법
             gridView1.OptionsPrint.AutoWidth = false;
             gridView1.OptionsView.ColumnAutoWidth = false;
-            gridView1.BestFitColumns(); // 그리드 컬럼의 최적 사이즈 Setting
+            gridView1.BestFitColumns();                                     // 그리드 컬럼의 최적 사이즈 Setting
             //bestFitBands(grdTest);
 
             // Excel Export Option Setting
@@ -170,6 +172,76 @@ namespace Grid_Control
             _view.BestFitColumns();
             _view.OptionsView.ShowColumnHeaders = false;
             _view.EndUpdate();
+        }
+
+        // [현재 폼이 보여질 때 Event Method]
+        public void frmGrid_Shown(object sender, EventArgs e)
+        {
+            // 그리드 ComboBox 선언
+            this.gradeComboBox = new RepositoryItemComboBox();
+            this.gridView1.Columns[1].ColumnEdit = this.gradeComboBox;
+
+            // 그리드 ComboBox 적용
+            initializeComboBoxEdit();
+        }
+
+        // [Grid 내에 Combo Box Setting Method]
+        private void initializeComboBoxEdit()
+        {
+            // ComboBox에 입력 될 배열
+            string[] testArray = new string[] { "0", "1", "2", "3", "4" };
+
+            // ComboBox에 데이터 적용
+            DevExpressHelper.ClearComboBoxEdit(gradeComboBox);
+            DevExpressHelper.SetComboBoxEditData(gradeComboBox, testArray);
+            gridView1.SetRowCellValue(gridView1.FocusedRowHandle, "Grade", gradeComboBox.Items[0]);
+        }
+
+        private void combo_dropdown_Click(object sender, EventArgs e)
+        {
+            combo_dropdown.ShowDropDown();
+        }
+
+        private void barButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Action<bool> dialogYn = null;
+
+            if (e.Item == barButtonItem4)
+            {
+                
+            }
+            else if (e.Item == barButtonItem5)
+            {
+                ShowDialog().Equals(true);
+            }
+            else if (e.Item == barButtonItem6)
+            {
+                ShowDialog().Equals(true);
+            }
+            else
+            {
+                dialogYn?.Invoke(false);
+            }
+        }
+    }
+
+    // [DevExpress Helper Class]
+    public class DevExpressHelper
+    {
+
+        /// 콤보 박스 에디터 초기화 Method
+        public static void ClearComboBoxEdit(RepositoryItemComboBox comboBoxEdit)
+        {
+            comboBoxEdit.Items.Clear();
+        }
+
+        /// 콤보 박스 에디터 데이터 적용 Method
+        public static void SetComboBoxEditData(RepositoryItemComboBox comboBoxEdit, params string[] itemValueArray)
+        {
+            foreach (string itemValue in itemValueArray)
+            {
+                comboBoxEdit.Items.Add(itemValue);
+            }
         }
     }
 }
