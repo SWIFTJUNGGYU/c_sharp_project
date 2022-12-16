@@ -94,6 +94,7 @@ C:\Users\82102\source\repos\Devexpress_Solution\Grid_Control\bin\Debug\net6.0-wi
 C:\Users\82102\source\repos\Devexpress_Solution\Grid_Control\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.ServiceProcess.ServiceController.dll
 C:\Users\82102\source\repos\Devexpress_Solution\Grid_Control\obj\Debug\net6.0-windows\Grid_Control.csproj.AssemblyReference.cache
 C:\Users\82102\source\repos\Devexpress_Solution\Grid_Control\obj\Debug\net6.0-windows\Grid_Control.Form1.resources
+C:\Users\82102\source\repos\Devexpress_Solution\Grid_Control\obj\Debug\net6.0-windows\Grid_Control.frmGrid.resources
 C:\Users\82102\source\repos\Devexpress_Solution\Grid_Control\obj\Debug\net6.0-windows\Grid_Control.csproj.GenerateResource.cache
 C:\Users\82102\source\repos\Devexpress_Solution\Grid_Control\obj\Debug\net6.0-windows\Grid_Control.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\82102\source\repos\Devexpress_Solution\Grid_Control\obj\Debug\net6.0-windows\Grid_Control.AssemblyInfoInputs.cache
@@ -105,4 +106,3 @@ C:\Users\82102\source\repos\Devexpress_Solution\Grid_Control\obj\Debug\net6.0-wi
 C:\Users\82102\source\repos\Devexpress_Solution\Grid_Control\obj\Debug\net6.0-windows\Grid_Control.pdb
 C:\Users\82102\source\repos\Devexpress_Solution\Grid_Control\obj\Debug\net6.0-windows\Grid_Control.genruntimeconfig.cache
 C:\Users\82102\source\repos\Devexpress_Solution\Grid_Control\obj\Debug\net6.0-windows\ref\Grid_Control.dll
-C:\Users\82102\source\repos\Devexpress_Solution\Grid_Control\obj\Debug\net6.0-windows\Grid_Control.frmGrid.resources

@@ -212,11 +212,11 @@ namespace Grid_Control
             }
             else if (e.Item == barButtonItem5)
             {
-                ShowDialog().Equals(true);
+                
             }
             else if (e.Item == barButtonItem6)
             {
-                ShowDialog().Equals(true);
+                
             }
             else
             {
