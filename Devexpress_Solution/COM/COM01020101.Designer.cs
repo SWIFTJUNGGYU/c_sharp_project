@@ -30,17 +30,19 @@
         {
             this.Tbl_Layout = new DevExpress.Utils.Layout.TablePanel();
             this.Tbl_Search = new DevExpress.Utils.Layout.TablePanel();
+            this.Btn_Search = new DevExpress.XtraEditors.SimpleButton();
             this.Lbl_Pgm_Id_Nm = new DevExpress.XtraEditors.LabelControl();
             this.Tbx_Pgm_Id_Nm = new DevExpress.XtraEditors.TextEdit();
             this.Tbl_Grd = new DevExpress.Utils.Layout.TablePanel();
             this.Grd_Bookmark = new DevExpress.XtraGrid.GridControl();
             this.Gv_Bookmark = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.NO = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.PGM_ID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.PGM_NM = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DSP_SEQ = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.REG_DTM = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Tbl_Sub_Title = new DevExpress.Utils.Layout.TablePanel();
+            this.Btn_Delete_Row = new DevExpress.XtraEditors.SimpleButton();
             this.Lbl_Grd_Title = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.Tbl_Layout)).BeginInit();
             this.Tbl_Layout.SuspendLayout();
@@ -81,6 +83,7 @@
             new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 5F),
             new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 10F),
             new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 50F)});
+            this.Tbl_Search.Controls.Add(this.Btn_Search);
             this.Tbl_Search.Controls.Add(this.Lbl_Pgm_Id_Nm);
             this.Tbl_Search.Controls.Add(this.Tbx_Pgm_Id_Nm);
             this.Tbl_Search.Location = new System.Drawing.Point(3, 3);
@@ -91,6 +94,18 @@
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26F)});
             this.Tbl_Search.Size = new System.Drawing.Size(1439, 20);
             this.Tbl_Search.TabIndex = 7;
+            // 
+            // Btn_Search
+            // 
+            this.Tbl_Search.SetColumn(this.Btn_Search, 2);
+            this.Btn_Search.Dock = System.Windows.Forms.DockStyle.Right;
+            this.Btn_Search.Location = new System.Drawing.Point(1361, 3);
+            this.Btn_Search.Name = "Btn_Search";
+            this.Tbl_Search.SetRow(this.Btn_Search, 0);
+            this.Btn_Search.Size = new System.Drawing.Size(75, 20);
+            this.Btn_Search.TabIndex = 4;
+            this.Btn_Search.Text = "조회";
+            this.Btn_Search.Click += new System.EventHandler(this.Btn_Search_Click);
             // 
             // Lbl_Pgm_Id_Nm
             // 
@@ -107,6 +122,8 @@
             this.Tbl_Search.SetColumn(this.Tbx_Pgm_Id_Nm, 1);
             this.Tbx_Pgm_Id_Nm.Location = new System.Drawing.Point(114, 3);
             this.Tbx_Pgm_Id_Nm.Name = "Tbx_Pgm_Id_Nm";
+            this.Tbx_Pgm_Id_Nm.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Tbx_Pgm_Id_Nm.Properties.Appearance.Options.UseBackColor = true;
             this.Tbl_Search.SetRow(this.Tbx_Pgm_Id_Nm, 0);
             this.Tbx_Pgm_Id_Nm.Size = new System.Drawing.Size(215, 20);
             this.Tbx_Pgm_Id_Nm.TabIndex = 2;
@@ -141,55 +158,86 @@
             this.Gv_Bookmark.Appearance.HeaderPanel.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.Gv_Bookmark.Appearance.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.Gv_Bookmark.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1,
-            this.gridColumn2,
-            this.gridColumn3,
-            this.gridColumn4,
-            this.gridColumn5});
+            this.NO,
+            this.PGM_ID,
+            this.PGM_NM,
+            this.DSP_SEQ,
+            this.REG_DTM});
             this.Gv_Bookmark.GridControl = this.Grd_Bookmark;
             this.Gv_Bookmark.Name = "Gv_Bookmark";
             this.Gv_Bookmark.OptionsView.ShowGroupPanel = false;
+            this.Gv_Bookmark.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.Gv_Bookmark_CustomDrawRowIndicator);
             // 
-            // gridColumn1
+            // NO
             // 
-            this.gridColumn1.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn1.Caption = "No";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
+            this.NO.AppearanceCell.Options.UseTextOptions = true;
+            this.NO.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.NO.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.NO.AppearanceHeader.Options.UseForeColor = true;
+            this.NO.Caption = "No";
+            this.NO.FieldName = "NO";
+            this.NO.Name = "NO";
+            this.NO.OptionsColumn.AllowEdit = false;
+            this.NO.OptionsColumn.ReadOnly = true;
+            this.NO.Visible = true;
+            this.NO.VisibleIndex = 0;
+            this.NO.Width = 20;
             // 
-            // gridColumn2
+            // PGM_ID
             // 
-            this.gridColumn2.Caption = "프로그램ID";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
+            this.PGM_ID.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.PGM_ID.AppearanceHeader.Options.UseForeColor = true;
+            this.PGM_ID.Caption = "프로그램ID";
+            this.PGM_ID.FieldName = "PGM_ID";
+            this.PGM_ID.Name = "PGM_ID";
+            this.PGM_ID.OptionsColumn.AllowEdit = false;
+            this.PGM_ID.OptionsColumn.ReadOnly = true;
+            this.PGM_ID.Visible = true;
+            this.PGM_ID.VisibleIndex = 1;
+            this.PGM_ID.Width = 50;
             // 
-            // gridColumn3
+            // PGM_NM
             // 
-            this.gridColumn3.Caption = "프로그램명";
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
+            this.PGM_NM.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.PGM_NM.AppearanceHeader.Options.UseForeColor = true;
+            this.PGM_NM.Caption = "프로그램명";
+            this.PGM_NM.FieldName = "PGM_NM";
+            this.PGM_NM.Name = "PGM_NM";
+            this.PGM_NM.OptionsColumn.AllowEdit = false;
+            this.PGM_NM.OptionsColumn.ReadOnly = true;
+            this.PGM_NM.Visible = true;
+            this.PGM_NM.VisibleIndex = 2;
+            this.PGM_NM.Width = 200;
             // 
-            // gridColumn4
+            // DSP_SEQ
             // 
-            this.gridColumn4.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn4.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.gridColumn4.Caption = "순서";
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 3;
+            this.DSP_SEQ.AppearanceCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.DSP_SEQ.AppearanceCell.Options.UseBackColor = true;
+            this.DSP_SEQ.AppearanceCell.Options.UseTextOptions = true;
+            this.DSP_SEQ.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.DSP_SEQ.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.DSP_SEQ.AppearanceHeader.Options.UseForeColor = true;
+            this.DSP_SEQ.Caption = "순서";
+            this.DSP_SEQ.FieldName = "DSP_SEQ";
+            this.DSP_SEQ.Name = "DSP_SEQ";
+            this.DSP_SEQ.Visible = true;
+            this.DSP_SEQ.VisibleIndex = 3;
+            this.DSP_SEQ.Width = 20;
             // 
-            // gridColumn5
+            // REG_DTM
             // 
-            this.gridColumn5.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn5.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn5.Caption = "등록일시";
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 4;
+            this.REG_DTM.AppearanceCell.Options.UseTextOptions = true;
+            this.REG_DTM.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.REG_DTM.AppearanceHeader.ForeColor = System.Drawing.Color.Black;
+            this.REG_DTM.AppearanceHeader.Options.UseForeColor = true;
+            this.REG_DTM.Caption = "등록일시";
+            this.REG_DTM.FieldName = "REG_DTM";
+            this.REG_DTM.Name = "REG_DTM";
+            this.REG_DTM.OptionsColumn.AllowEdit = false;
+            this.REG_DTM.OptionsColumn.ReadOnly = true;
+            this.REG_DTM.Visible = true;
+            this.REG_DTM.VisibleIndex = 4;
+            this.REG_DTM.Width = 100;
             // 
             // Tbl_Sub_Title
             // 
@@ -197,6 +245,7 @@
             this.Tbl_Sub_Title.Columns.AddRange(new DevExpress.Utils.Layout.TablePanelColumn[] {
             new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 5F),
             new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 55F)});
+            this.Tbl_Sub_Title.Controls.Add(this.Btn_Delete_Row);
             this.Tbl_Sub_Title.Controls.Add(this.Lbl_Grd_Title);
             this.Tbl_Sub_Title.Location = new System.Drawing.Point(3, 55);
             this.Tbl_Sub_Title.Name = "Tbl_Sub_Title";
@@ -206,6 +255,18 @@
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26F)});
             this.Tbl_Sub_Title.Size = new System.Drawing.Size(1439, 20);
             this.Tbl_Sub_Title.TabIndex = 5;
+            // 
+            // Btn_Delete_Row
+            // 
+            this.Tbl_Sub_Title.SetColumn(this.Btn_Delete_Row, 1);
+            this.Btn_Delete_Row.Dock = System.Windows.Forms.DockStyle.Right;
+            this.Btn_Delete_Row.Location = new System.Drawing.Point(1357, 3);
+            this.Btn_Delete_Row.Name = "Btn_Delete_Row";
+            this.Tbl_Sub_Title.SetRow(this.Btn_Delete_Row, 0);
+            this.Btn_Delete_Row.Size = new System.Drawing.Size(79, 20);
+            this.Btn_Delete_Row.TabIndex = 4;
+            this.Btn_Delete_Row.Text = "행추가";
+            this.Btn_Delete_Row.Click += new System.EventHandler(this.Btn_Delete_Row_Click);
             // 
             // Lbl_Grd_Title
             // 
@@ -225,6 +286,7 @@
             this.Controls.Add(this.Tbl_Layout);
             this.Name = "COM01020101";
             this.Text = "COM01020101";
+            this.Load += new System.EventHandler(this.COM01020101_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Tbl_Layout)).EndInit();
             this.Tbl_Layout.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Tbl_Search)).EndInit();
@@ -252,12 +314,14 @@
         private DevExpress.Utils.Layout.TablePanel Tbl_Grd;
         private DevExpress.XtraGrid.GridControl Grd_Bookmark;
         private DevExpress.XtraGrid.Views.Grid.GridView Gv_Bookmark;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraGrid.Columns.GridColumn NO;
+        private DevExpress.XtraGrid.Columns.GridColumn PGM_ID;
+        private DevExpress.XtraGrid.Columns.GridColumn PGM_NM;
+        private DevExpress.XtraGrid.Columns.GridColumn DSP_SEQ;
+        private DevExpress.XtraGrid.Columns.GridColumn REG_DTM;
         private DevExpress.Utils.Layout.TablePanel Tbl_Sub_Title;
         private DevExpress.XtraEditors.LabelControl Lbl_Grd_Title;
+        private DevExpress.XtraEditors.SimpleButton Btn_Search;
+        private DevExpress.XtraEditors.SimpleButton Btn_Delete_Row;
     }
 }
