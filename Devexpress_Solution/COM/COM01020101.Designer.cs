@@ -144,6 +144,7 @@
             // 
             // Grd_Bookmark
             // 
+            this.Grd_Bookmark.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Grd_Bookmark.Location = new System.Drawing.Point(3, 13);
             this.Grd_Bookmark.MainView = this.Gv_Bookmark;
             this.Grd_Bookmark.Name = "Grd_Bookmark";
